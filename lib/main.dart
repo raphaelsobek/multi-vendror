@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:laravelflutter/providers/auth/providers/phone_auth.dart';
 import 'package:laravelflutter/screens/home_screen.dart';
 import 'package:laravelflutter/screens/onboard_screen.dart';
 import 'package:laravelflutter/screens/registration_screen.dart';
@@ -17,9 +18,9 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => PhoneAuthDataProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -27,8 +28,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
-  @override
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,12 +60,12 @@ class _SplashScreenState extends State<SplashScreen> {
         if (user == null) {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => WelcomeScreen()),
+            MaterialPageRoute(builder: (context) => const WelcomeScreen()),
           );
         } else {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
           );
         }
       });

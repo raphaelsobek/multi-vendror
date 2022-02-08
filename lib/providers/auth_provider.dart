@@ -10,7 +10,7 @@ class AuthProvider with ChangeNotifier {
   late String smsOtp;
   late String verificationId;
   late String error = '';
-  UserServices _userServices = UserServices();
+  final UserServices _userServices = UserServices();
 
   Future<void> verifyPhone(BuildContext context, String number) async {
     final PhoneVerificationCompleted verificationCompleted =
@@ -51,7 +51,7 @@ class AuthProvider with ChangeNotifier {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Column(
-              children: [
+              children: const [
                 Text('Verification'),
                 SizedBox(
                   height: 6,
@@ -94,8 +94,7 @@ class AuthProvider with ChangeNotifier {
                       print('Login Failed');
                     }
                   } catch (e) {
-                    this.error = 'invalid OTP';
-                    print(e.toString());
+                    error = 'invalid OTP';
                     Navigator.of(context).pop();
                   }
                 },
