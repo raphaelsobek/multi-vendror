@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "995808792481",
+    "project_id": "rockettbooster-74ecd",
+    "storage_bucket": "rockettbooster-74ecd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995808792481:android:1f9bdff9659961ac55c5e0",
+        "android_client_info": {
+          "package_name": "com.example.laravelflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995808792481-hq4vbio5q3o7jesal3r1u041ksi3lu7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.laravelflutter",
+            "certificate_hash": "20d9610b4f312adb39f07d58cefffb25c4aa6052"
+          }
+        },
+        {
+          "client_id": "995808792481-90evui78tedppqcsg85df61a37lor3fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQGjynkn0MGTRdmM-NtyGDoHOm81mxhwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995808792481-90evui78tedppqcsg85df61a37lor3fc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
